@@ -22,6 +22,7 @@ $btn-padding: 10px 20px;
 
 * {
 	margin: 0;
+    padding: 0;
 }
 
 html {
@@ -29,6 +30,9 @@ html {
     
 }
 
+.list {
+    list-style-type: none;
+}
 
 body {
 	background: linear-gradient(#e66465, #9198e5);

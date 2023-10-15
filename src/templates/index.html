@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f29121ee52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../carousel/styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -29,16 +31,63 @@
     <main id="main" class="main container">
         <section class="home">
             <div class="home__inner">
-                <h1 class="home__title">
-                    Добро пожаловать в мой личный блог, посвященный интереснейшим местам России
-                </h1>
-                <div class="home__description">
-                    Россия — не просто щедрая душа, но ещё и тысячи мест, где можно этой самой душой отдохнуть. Долина гейзеров, Ленские столбы, Байкал, Казанский Кремль известны практически каждому, но есть в нашей стране сотни природных и архитектурных красот, которые не так часто попадают в туристические рейтинги, хотя заслуживают не меньшего внимания. Сегодня я расскажу о нескольких из них — вдохновляйтесь и пакуйте чемоданы!
+
+                <h1 class="gallery__title">Красивейшие места России</h1>
+                <div class="carousel">
+                    <button class="carousel__btn arrow prev__btn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <ul class="carousel__inner list">
+                        <li class="carousel__item active" data-carousel-item>
+                            <h2 class="carousel__title">Алмазная шахта «Мир»</h2>
+                            <img
+                            class="carousel__img"
+                            src="../assets/almaznaya-schahta-yakutiya.JPG"
+                            alt="Алмазная шахта «Мир»"
+                            />
+                        </li>
+                
+                        <li class="carousel__item" data-carousel-item>
+                            <h2 class="carousel__title">Соловецкий монастырь</h2>
+                            <img
+                            class="carousel__img"
+                            src="../assets/soloverski-monastyr-Arkhangelsk.JPG"
+                            alt="Cоловецкий монастырь"
+                            />
+                        </li>
+                
+                        <li class="carousel__item" data-carousel-item>
+                            <h2 class="carousel__title">Чарские пески</h2>
+                            <img
+                            class="carousel__img"
+                            src="../assets/charskie-peski-zabaikal.JPG"
+                            alt="Чарские пески"
+                            />
+                        </li>
+                
+                        <li class="carousel__item" data-carousel-item>
+                            <h2 class="carousel__title">Долина привидений</h2>
+                            <img
+                            class="carousel__img"
+                            src="../assets/dolina-privideniy-Crimea.JPG"
+                            alt="Долина привидений"
+                            />
+                        </li>
+                    </ul>
+                    <button class="carousel__btn arrow next__btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
         </section>
     </main>
     <footer class="footer"></footer>
+    <script src="../carousel/carousel.js"></script>
+
+    <script type="text/javascript">
+
+        const element = document.querySelector('.carousel');
+
+        const carousel = new Carousel(element, 5000);
+    
+    </script>
+
 </body>
 </html>
