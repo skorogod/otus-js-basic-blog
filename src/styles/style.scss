@@ -1,7 +1,7 @@
 $header-bg-color: rgb(42 59 85 / 80%);
 $container-bg-color: rgb(192 192 228 / 83.6%);
 $container-bg-color: rgb(192 192 228 / 83.6%);
-$form-part-shadow: 5px 3px  10px black;
+$form-part-shadow: 5px 3px 10px black;
 $btn-padding: 10px 20px;
 
 @mixin margin-auto() {
@@ -19,24 +19,22 @@ $btn-padding: 10px 20px;
 	letter-spacing: 0.1em;
 }
 
-
 * {
 	margin: 0;
-    padding: 0;
+	padding: 0;
 }
 
 html {
 	height: 100%;
-    
 }
 
 .list {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 body {
 	background: linear-gradient(#e66465, #9198e5);
-	background-image: url('../assets/background.JPG');
+	background-image: url("../assets/background.JPG");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height: 100%;
@@ -47,12 +45,10 @@ body {
 	margin: 0 auto;
 }
 
-
 .header {
 	height: 80px;
 	background-color: $header-bg-color;
 	color: white;
-    
 
 	.header__navbar {
 		display: flex;
@@ -74,7 +70,8 @@ body {
 		align-items: center;
 	}
 
-	.list__item, .list__item_selected {
+	.list__item,
+	.list__item_selected {
 		display: inline-block;
 		font-size: 1.3rem;
 		height: auto;
@@ -83,7 +80,7 @@ body {
 	}
 }
 
-.nav__link{
+.nav__link {
 	display: table-cell;
 	vertical-align: middle;
 	height: 80px;
@@ -91,7 +88,6 @@ body {
 	color: white;
 	text-decoration: none;
 }
-
 
 .main {
 	margin-top: 150px;
@@ -159,7 +155,6 @@ body {
 	object-fit: cover;
 	height: 250px;
 }
-
 
 .card__btn {
 	width: 100px;
@@ -234,7 +229,7 @@ body {
 	font-size: 1.1rem;
 	border: none;
 	border-radius: 5px;
-	box-shadow: 5px 3px  10px black;
+	box-shadow: 5px 3px 10px black;
 }
 
 .form__submit {
@@ -249,16 +244,13 @@ body {
 	&:hover {
 		box-shadow: inset 0 1px 3px 1px black;
 	}
-
 }
-
 
 @media (width <= 1200px) {
 	.container {
 		max-width: 940px;
 	}
 }
-
 
 @media (width <= 992px) {
 	.container {
