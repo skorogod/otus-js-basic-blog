@@ -1,4 +1,4 @@
-function Carousel(element, interval = 2000) {
+function Carousel(element, autoplay, interval = 2000) {
   window.addEventListener("load", function () {
     let intervalId;
     this.interval = interval;
@@ -75,18 +75,26 @@ function Carousel(element, interval = 2000) {
     function onNextClick() {
       clearInterval(intervalId);
       this.next.call(this);
-      intervalId = setInterval(this.next.bind(this), interval);
+
+      if (autoplay) {
+        intervalId = setInterval(this.next.bind(this), interval);
+      }
     }
 
     function onPrevClick() {
       clearInterval(intervalId);
       this.prev.call(this);
-      intervalId = setInterval(this.next.bind(this), interval);
+
+      if (autoplay) {
+        intervalId = setInterval(this.next.bind(this), interval);
+      }
     }
 
     this.btnNext.addEventListener("click", onNextClick.bind(this));
     this.btnPrev.addEventListener("click", onPrevClick.bind(this));
 
-    intervalId = setInterval(this.next.bind(this), this.interval);
+    if (autoplay) {
+      intervalId = setInterval(this.next.bind(this), this.interval);
+    }
   });
 }

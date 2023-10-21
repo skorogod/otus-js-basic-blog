@@ -33,7 +33,7 @@
             <div class="home__inner">
 
                 <h1 class="gallery__title">Красивейшие места России</h1>
-                <div class="carousel">
+                <div class="carousel autoplay">
                     <button class="carousel__btn arrow prev__btn"><i class="fa-solid fa-arrow-left"></i></button>
                     <ul class="carousel__inner list">
                         <li class="carousel__item active" data-carousel-item>
@@ -85,7 +85,9 @@
 
         const element = document.querySelector('.carousel');
 
-        const carousel = new Carousel(element, 5000);
+        const autoplay = true ? element.classList.contains('autoplay') : false;
+
+        const carousel = new Carousel(element, autoplay, 5000);
     
     </script>
 
