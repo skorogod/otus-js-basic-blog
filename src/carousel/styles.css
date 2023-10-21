@@ -1,0 +1,82 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 2s ease;
+}
+
+.carousel__inner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  transition: all 1.2s ease;
+}
+
+.carousel__item {
+  position: absolute;
+  flex-shrink: 0;
+  text-align: center;
+  scroll-snap-align: center;
+  transition: all 1.3s ease;
+  opacity: 0;
+}
+
+.carousel__item.active {
+  margin-left: 0;
+  opacity: 1;
+}
+
+.carousel__item.next {
+  margin-left: 100%;
+}
+
+.carousel__item.prev {
+  margin-left: -100%;
+}
+
+.carousel__title {
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: rgba(48, 41, 41, 0.514);
+  padding: 10px 5px;
+  color: whitesmoke;
+  bottom: 20px;
+  left: 50%;
+}
+
+.carousel__img {
+  display: inline-block;
+  object-fit: cover;
+  width: 80%;
+  height: 400px;
+}
+
+.carousel__btn {
+  padding: 10px;
+  font-size: 1.5rem;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(66, 68, 175, 0.473);
+  border: none;
+  border-radius: 50%;
+}
+
+.carousel__btn:hover {
+  background-color: rgba(96, 97, 170, 0.473);
+}
+
+.prev__btn {
+  left: 0;
+}
+
+.next__btn {
+  right: 0;
+}

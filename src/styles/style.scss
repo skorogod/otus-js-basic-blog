@@ -1,0 +1,263 @@
+$header-bg-color: rgb(42 59 85 / 80%);
+$container-bg-color: rgb(192 192 228 / 83.6%);
+$container-bg-color: rgb(192 192 228 / 83.6%);
+$form-part-shadow: 5px 3px 10px black;
+$btn-padding: 10px 20px;
+
+@mixin margin-auto() {
+	margin: 0 auto;
+}
+
+@mixin title() {
+	text-align: center;
+	color: whitesmoke;
+	font-size: 3rem;
+	text-shadow: -1px -1px 5px black,
+	1px -1px 3px black,
+	-1px 1px 3px black,
+	1px 1px 3px black;
+	letter-spacing: 0.1em;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+.list {
+	list-style-type: none;
+}
+
+body {
+	background: linear-gradient(#e66465, #9198e5);
+	background-image: url("../assets/background.JPG");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.header {
+	height: 80px;
+	background-color: $header-bg-color;
+	color: white;
+
+	.header__navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		line-height: 25.5px;
+		text-align: center;
+	}
+
+	.navbar__nav {
+		height: 80px;
+	}
+
+	.navbar__logo {
+		display: flex;
+		font-size: 35px;
+		line-height: 52.5px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.list__item,
+	.list__item_selected {
+		display: inline-block;
+		font-size: 1.3rem;
+		height: auto;
+		width: auto;
+		text-transform: uppercase;
+	}
+}
+
+.nav__link {
+	display: table-cell;
+	vertical-align: middle;
+	height: 80px;
+	width: 160px;
+	color: white;
+	text-decoration: none;
+}
+
+.main {
+	margin-top: 150px;
+	margin-bottom: 50px;
+
+	.home {
+		max-width: 840px;
+		margin: 0 auto;
+	}
+
+	.home__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+		padding: 5px 10px;
+	}
+
+	.home__title {
+		background-color: rgb(192 192 228 / 56.8%);
+		padding: 10px 20px;
+		font-size: 2rem;
+	}
+
+	.home__description {
+		background-color: rgb(192 192 228 / 62.3%);
+		padding: 10px 20px;
+		font-size: 1.8rem;
+		letter-spacing: 0.05em;
+		line-height: 2.2 rem;
+		text-align: center;
+	}
+}
+
+.gallery__title {
+	@include title;
+}
+
+.gallery__container {
+	margin-top: 20px;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px;
+	justify-content: space-between;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	font-size: 1.2rem;
+	font-weight: 500;
+	max-width: 330px;
+	border: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: $container-bg-color;
+	box-shadow: 0 0 10px 3px black;
+}
+
+.card__title {
+	align-self: center;
+}
+
+.card__img {
+	object-fit: cover;
+	height: 250px;
+}
+
+.card__btn {
+	width: 100px;
+	background-color: rgb(32 29 13 / 65.1%);
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: $btn-padding;
+	color: white;
+	font-size: 1rem;
+	align-self: center;
+
+	&:hover {
+		background-color: rgb(51 48 29 / 65.1%);
+	}
+}
+
+.note__container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	background-color: $container-bg-color;
+	padding: 20px 40px;
+	border-radius: 20px;
+	font-size: 1.5rem;
+	font-weight: 500;
+
+	.note__title {
+		text-align: center;
+	}
+
+	.note__info {
+		display: flex;
+		column-gap: 20px;
+	}
+
+	.note__img {
+		max-width: 50%;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+
+	.note__description {
+		overflow: auto;
+	}
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+}
+
+.contact__title {
+	@include title;
+}
+
+.contact__container {
+	display: flex;
+	justify-content: center;
+}
+
+.contact__form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.form__input {
+	width: 400px;
+	padding: 10px;
+	font-size: 1.1rem;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 5px 3px 10px black;
+}
+
+.form__submit {
+	max-width: 100px;
+	padding: $btn-padding;
+	box-shadow: $form-part-shadow;
+	border: none;
+	border-radius: 10px;
+	background-color: $container-bg-color;
+	align-self: center;
+
+	&:hover {
+		box-shadow: inset 0 1px 3px 1px black;
+	}
+}
+
+@media (width <= 1200px) {
+	.container {
+		max-width: 940px;
+	}
+}
+
+@media (width <= 992px) {
+	.container {
+		max-width: 720px;
+	}
+
+	.home {
+		max-width: 620px;
+	}
+}
