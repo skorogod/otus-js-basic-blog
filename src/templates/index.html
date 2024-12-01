@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f29121ee52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../carousel/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container container">
+          <nav class="header__navbar">
+            <a class="navbar__logo nav__link logo" href="./index.html">MyBLOG</a>
+            <ul class="navbar__nav nav list">
+              <li class="list__item_selected">
+                <a class="nav__link" href="./index.html">Главная</a>
+              </li>
+              <li class="list__item">
+                <a class="nav__link" href="./gallery.html">Галерея</a>
+              </li>
+              <li class="list__item">
+                <a class="nav__link" href="./contact.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <main id="main" class="main container">
+        <section class="home">
+            <div class="home__inner">
+
+                <h1 class="gallery__title">Красивейшие места России</h1>
+                <div class="carousel autoplay">
+                    <button class="carousel__btn arrow prev__btn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <ul class="carousel__inner list">
+                        <li class="carousel__item active" data-carousel-item>
+                            <h2 class="carousel__title">Алмазная шахта «Мир»</h2>
+                            <img
+                            class="carousel__img"
+                            src="../assets/almaznaya-schahta-yakutiya.JPG"
+                            alt="Алмазная шахта «Мир»"
+                            />
+                        </li>
+                
+                        <li class="carousel__item" data-carousel-item>
+                            <h2 class="carousel__title">Соловецкий монастырь</h2>
+                            <img
+                            class="carousel__img"
+                            src="../assets/soloverski-monastyr-Arkhangelsk.JPG"
+                            alt="Cоловецкий монастырь"
+                            />
+                        </li>
+                
+                        <li class="carousel__item" data-carousel-item>
+                            <h2 class="carousel__title">Чарские пески</h2>
+                            <img
+                            class="carousel__img"
+                            src="../assets/charskie-peski-zabaikal.JPG"
+                            alt="Чарские пески"
+                            />
+                        </li>
+                
+                        <li class="carousel__item" data-carousel-item>
+                            <h2 class="carousel__title">Долина привидений</h2>
+                            <img
+                            class="carousel__img"
+                            src="../assets/dolina-privideniy-Crimea.JPG"
+                            alt="Долина привидений"
+                            />
+                        </li>
+                    </ul>
+                    <button class="carousel__btn arrow next__btn"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="../carousel/carousel.js"></script>
+
+    <script type="text/javascript">
+
+        const element = document.querySelector('.carousel');
+
+        const autoplay = true ? element.classList.contains('autoplay') : false;
+
+        const carousel = new Carousel(element, autoplay, 5000);
+    
+    </script>
+
+</body>
+</html>

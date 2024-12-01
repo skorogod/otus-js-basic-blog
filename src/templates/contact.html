@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <nav class="header__navbar">
+          <a class="navbar__logo nav__link logo" href="./index.html">MyBLOG</a>
+          <ul class="navbar__nav nav list">
+            <li class="list__item_selected">
+              <a class="nav__link" href="./index.html">Главная</a>
+            </li>
+            <li class="list__item">
+              <a class="nav__link" href="./gallery.html">Галерея</a>
+            </li>
+            <li class="list__item">
+              <a class="nav__link" href="./contact.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="main container">
+      <section class="contact">
+        <h1 class="contact__title title">Обратная связь</h1>
+
+        <div class="contact__container">
+          <form class="contact__form" action="submit">
+            <input class="form__input" type="email" placeholder="input email" />
+            <input class="form__submit" type="submit" value="Отправить" />
+          </form>
+          <div class="contact__data">
+            <div class="contact__phone"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>

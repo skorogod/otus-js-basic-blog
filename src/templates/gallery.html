@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <nav class="header__navbar">
+          <a class="navbar__logo nav__link logo" href="./index.html">MyBLOG</a>
+          <ul class="navbar__nav nav list">
+            <li class="list__item_selected">
+              <a class="nav__link" href="./index.html">Главная</a>
+            </li>
+            <li class="list__item">
+              <a class="nav__link" href="./gallery.html">Галерея</a>
+            </li>
+            <li class="list__item">
+              <a class="nav__link" href="./contact.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="main container">
+      <section class="gallery">
+        <h1 class="gallery__title">Красивейшие места России</h1>
+        <div class="gallery__container">
+          <article class="card">
+            <h2 class="card__title">Алмазная шахта «Мир»</h2>
+            <img
+              class="card__img"
+              src="../assets/almaznaya-schahta-yakutiya.JPG"
+              alt="Алмазная шахта «Мир»"
+            />
+            <button class="card__btn" onclick="location.href='./Yakutiya.html'">
+              Читать
+            </button>
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Соловецкий монастырь</h2>
+            <img
+              class="card__img"
+              src="../assets/soloverski-monastyr-Arkhangelsk.JPG"
+              alt="Cоловецкий монастырь"
+            />
+            <button
+              class="card__btn"
+              onclick="location.href='./Arkhangelsk.html'"
+            >
+              Читать
+            </button>
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Чарские пески</h2>
+            <img
+              class="card__img"
+              src="../assets/charskie-peski-zabaikal.JPG"
+              alt="Чарские пески"
+            />
+            <button class="card__btn" onclick="location.href='./Zabaikal.html'">
+              Читать
+            </button>
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Долина привидений</h2>
+            <img
+              class="card__img"
+              src="../assets/dolina-privideniy-Crimea.JPG"
+              alt="Долина привидений"
+            />
+            <button class="card__btn" onclick="location.href='./Crimea.html'">
+              Читать
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>
